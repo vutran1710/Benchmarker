@@ -1,0 +1,20 @@
+[package]
+name = "rust-actix"
+version = "0.1.0"
+authors = ["vutr <me@vutr.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "2.0.0"
+actix-rt = "1.0.0"
+actix-service = "1.0.0"
+
+bytes = "0.5.2"
+futures = "0.3.1"
+env_logger = "0.7"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+json = "0.12"
