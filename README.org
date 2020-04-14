@@ -1,4 +1,9 @@
 * Benchmarking several backend applications
+- *Why?*
+  - I'm mainly concerned with what I have in my development toolbelt - that means Python, JS, Clojure & Rust.
+  - It is widely known that Rust is the most performant language, but still I want to see how fast it is compared
+    to other frameworks/libraries I've been using daily for enterprise-grade application development.
+  - Learning fun - Thats why!
 
 ** Subjects for testing
 
