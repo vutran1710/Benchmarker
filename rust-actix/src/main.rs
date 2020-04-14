@@ -15,8 +15,7 @@ pub struct Sum {
     y: u32,
 }
 
-/// This handler manually load request payload and parse json object
-async fn index_manual(web::Query(param): web::Query<Sum>) -> Result<HttpResponse, Error> {
+async fn sum_calculator(web::Query(param): web::Query<Sum>) -> Result<HttpResponse, Error> {
     let total = param.x + param.y;
     let resp = SumResponse { total };
     Ok(HttpResponse::Ok().json(resp))
@@ -26,9 +25,8 @@ async fn index_manual(web::Query(param): web::Query<Sum>) -> Result<HttpResponse
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-            // enable logger
-            .data(web::JsonConfig::default().limit(4096)) // <- limit size of the payload (global configuration)
-            .service(web::resource("/rust/plus").route(web::get().to(index_manual)))
+            .data(web::JsonConfig::default().limit(4096))
+            .service(web::resource("/rust/plus").route(web::get().to(sum_calculator)))
     })
     .bind("127.0.0.1:8080")?
     .run()
