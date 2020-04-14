@@ -13,7 +13,9 @@
 - [[https://github.com/networknt/light-4j][Light-4J (java)]]
 
 *NOTE*
+
 - source code for HTTPKit app is [[https://github.com/vutran1710/ClojuricWeb][here]]
+- no source code available for Light4j
 
 ** Scenario
 
@@ -38,7 +40,6 @@
 $ bombardier -c 100 -d 30s "http://localhost:8080/clojure/plus?x=1&y=3"
 Bombarding http://localhost:8080/clojure/plus?x=1&y=3 for 30s using 100 connection(s)
 [====================================================================================] 30s
-Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec     30265.79   11146.13   48148.98
   Latency        3.32ms     3.46ms   319.56ms
@@ -52,7 +53,6 @@ Statistics        Avg      Stdev        Max
 $ bombardier -c 100 -d 30s "http://localhost:5000/python/plus?x=3&y=1"
 Bombarding http://localhost:5000/python/plus?x=3&y=1 for 30s using 100 connection(s)
 [===================================================================================] 30s
-Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec     10740.29    1730.15   13932.79
   Latency        9.32ms     8.50ms   379.46ms
@@ -66,7 +66,6 @@ Statistics        Avg      Stdev        Max
 $ bombardier -c 100 -d 30s "http://localhost:8080/rust/plus?x=1&y=3"
 Bombarding http://localhost:8080/rust/plus?x=1&y=3 for 30s using 100 connection(s)
 [===================================================================================] 30s
-Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec     81700.23   13506.45   93240.30
   Latency        1.22ms     3.18ms   293.96ms
@@ -79,7 +78,6 @@ Statistics        Avg      Stdev        Max
 $ bombardier -c 100 -d 30s "http://localhost:8080/light4j/plus?x=3&y=2"
 Bombarding http://localhost:8080/light4j/plus?x=3&y=2 for 30s using 100 connection(s)
 [===================================================================================] 30s
-Done!
 Statistics        Avg      Stdev        Max
   Reqs/sec     83641.34   11065.35  101699.66
   Latency        1.21ms     5.73ms   308.53ms
